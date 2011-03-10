@@ -1,0 +1,17 @@
+#controls {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	padding: 0.5em;
+	display: block;
+}
+
+#message {width: 80%;}
+
+#log {
+  font-family: helvetica, arial, sans-serif;
+  font-size: .8em;
+  padding-bottom: 40px;
+}

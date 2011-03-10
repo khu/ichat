@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chat demo</title>		
+	<style>
+	#controls {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #fff;
+		padding: 0.5em;
+		display: block;
+	}
+
+	#message {width: 80%;}
+
+	#log {
+	  font-family: helvetica, arial, sans-serif;
+	  font-size: .8em;
+	  padding-bottom: 40px;
+	}
+
+	#file-drop {
+		height:40px;
+		width: 80%;
+	}
+
+	.dragging {
+		border: 2px dashed #000;		
+	}
+
+	.wait-for-drop {
+		border: 2px dashed #CCC;		
+	}		
+	</style>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="client.js" type="text/javascript" charset="utf-8"></script>		
+  </head>
+  <body>
+	  <section id="log"></section>
+	  <section id="controls">
+	    <hr />
+	    <input type="text" id="message"/>
+		<div id="file-drop" class="wait-for-drop">drag &amp; drop your image here</div>	
+	    <input type="button" value="send" id="sendbtn" disabled="disabled">
+	  </section>
+  </body>
+</html>
