@@ -1,6 +1,6 @@
 
 $(function(){
-  var conn = new WebSocket("ws://localhost:8000/");
+  var conn = new WebSocket("ws://" + window.location.host);
   conn.onmessage = function(evt) {
     log(evt.data);
   };
