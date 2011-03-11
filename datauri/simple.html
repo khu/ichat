@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<h1 id="sample" style="border:1px dashed #ccc;height:300px;width:500px"></h1>
+
+<script>
+var holder = document.getElementById('sample')
+ holder.ondragover= function(e) {
+	holder.innerHTML= "drag over";
+	return false;
+ };
+ holder.ondragleave = function(e) {
+	holder.innerHTML= "drag leave";
+	return false;
+ };
+
+ holder.ondrop = function(e) {
+	holder.innerHTML= "drop";
+	e.preventDefault();
+	var file = e.dataTransfer.files[0];
+	var imageType = /image.*/;
+	if (!file.type.match(imageType)) {
+		return;
+	}
+	alert(file.type)
+ };
+
+
+</script>
+</html>
